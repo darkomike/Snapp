@@ -12,7 +12,7 @@ class AppTheme {
         color: Colors.white,
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.grey[500],
+          backgroundColor: Colors.white,
           type: BottomNavigationBarType.fixed,
           unselectedItemColor: Colors.black87),
       textTheme: TextTheme(
@@ -32,7 +32,7 @@ class AppTheme {
       appBarTheme: AppBarTheme(
           textTheme: TextTheme(
               headline6: TextStyle(color: Colors.black, fontSize: 20)),
-          color: Colors.grey[500],
+          color: Colors.white,
           iconTheme: IconThemeData(color: Colors.black)));
 
 
@@ -64,7 +64,7 @@ class AppTheme {
       backgroundColor: Colors.blueGrey[800],
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         unselectedItemColor: Colors.white60,
-        backgroundColor: Colors.indigo[700],
+        backgroundColor: Colors.blueGrey[800],
         type: BottomNavigationBarType.fixed,
       ),
       textTheme: TextTheme(
@@ -90,6 +90,6 @@ class AppTheme {
       ),
       appBarTheme: AppBarTheme(
 //          color: Colors.blueGrey[800],
-          color: Colors.indigo[700],
+          color: Colors.blueGrey[800],
           iconTheme: IconThemeData(color: Colors.white70)));
 }

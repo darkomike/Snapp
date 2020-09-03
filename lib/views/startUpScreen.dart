@@ -105,13 +105,13 @@ class _StartUpScreenState extends State<StartUpScreen> {
                                   //TODO: move to login dialog ...
                                   print("Log In button is clicked");
 
-                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
-                                    return HomeScreen();
-                                  }) );
+//                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
+//                                    return HomeScreen();
+//                                  }) );
 
-//                                  setState(() {
-//                                    _logInDialog(context: context);
-//                                  });
+                                  setState(() {
+                                    _logInDialog(context: context);
+                                  });
                                 },
                                 child: Container(
                                   width: width * 0.30,
@@ -362,7 +362,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
   _nextButton(){
 
     if(_mobileLoginFormKey.currentState.validate()){
-
+//TODO:
     }
   }
 
@@ -501,28 +501,38 @@ class _StartUpScreenState extends State<StartUpScreen> {
         });
   }
 
+
+
   _checkAppTheme(String value) {
+
     bool isDark =
         Provider.of<AppStateNotifier>(context, listen: false).isDarkModeOn;
 
 
-    setState(() {
       switch (value) {
         case "Day":
-          Provider.of<AppStateNotifier>(context, listen: false)
-              .updateTheme(!isDark);
+          isDark = false;
+         setState(() {
+           Provider.of<AppStateNotifier>(context, listen: false)
+               .updateTheme(isDark);
+         });
+
+
 
           print("Day");
           break;
         case "Night":
+          isDark = true;
+        setState(() {
           Provider.of<AppStateNotifier>(context, listen: false)
               .updateTheme(isDark);
+        });
           print("Night");
           break;
         default:
           break;
       }
-    });
+
   }
 
   Widget setAppTheme() {
@@ -541,7 +551,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
       onChanged: (String value) {
         //TODO: to change the app theme
         setState(() {
-          _selectedAppTheme = value;
+
           _checkAppTheme(value);
         });
       },

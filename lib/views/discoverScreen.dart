@@ -35,59 +35,56 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 height: 10,
               ),
             ),
-            GestureDetector(
-              onTap: (){
-                print("Echo is tapped");
-                //TODO:
-              },
-              child: Card(
-                child: listTile1('Echo', context, 0),
-                elevation: 0.0,
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            GestureDetector(
-              onTap: (){
-                print("Search is tapped");
-                //TODO:
-              },
-              child: Card(
-                child: listTile1('Search', context, 0),
-                elevation: 0.0,
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            GestureDetector(
-              onTap: (){
-                print("People Nearby  is tapped");
-                //TODO:
-              },
-              child: Card(
-                child: listTile1('People Nearby', context, 0),
-                elevation: 0.0,
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            GestureDetector(
 
-              onTap: (){
-                print("Mini Programs is tapped");
-                //TODO:
-              },
-              child: Card(
-                child: listTile1('Mini Programs', context, 0),
-                elevation: 0.0,
+            GestureDetector(
+                onTap: (){
+                  print("Echo is tapped");
+                  //TODO:
+                },
+                child: Card(elevation: 0.0, child: listTile1('Echo', context, 100))),
+            Padding(
+              padding: const EdgeInsets.only(left: 0),
+              child: Divider(
+                height: 10,
               ),
             ),
-            SizedBox(
-              height: 5,
+
+            GestureDetector(
+                onTap: (){
+                  print("Search is tapped");
+                  //TODO:
+                },
+                child: Card(elevation: 0.0, child: listTile1('Search', context, 70))),
+            Padding(
+              padding: const EdgeInsets.only(left: 0),
+              child: Divider(
+                height: 10,
+              ),
+            ), GestureDetector(
+                onTap: (){
+                  print("People Nearby is tapped");
+                  //TODO:
+                },
+                child: Card(elevation: 0.0, child: listTile1('People', context, 80))),
+            Padding(
+              padding: const EdgeInsets.only(left: 0),
+              child: Divider(
+                height: 10,
+              ),
+            ), GestureDetector(
+                onTap: (){
+                  print("Mini Programs is tapped");
+                  //TODO:
+                },
+                child: Card(elevation: 0.0, child: listTile1('Mini Programs', context, 40))),
+            Padding(
+              padding: const EdgeInsets.only(left:10),
+              child: Divider(
+                height: 10,
+              ),
             ),
+
+
           ],
         ),
       )),
