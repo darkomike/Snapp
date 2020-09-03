@@ -36,9 +36,9 @@ class _MeScreenState extends State<MeScreen> {
                   children: [
                     ListTile(
                       leading: ClipRRect(
-                        borderRadius: BorderRadius.circular(18.0), //or 15.0
+                        borderRadius: BorderRadius.circular(10.0), //or 15.0
                         child: Container(
-                          height: 200.0,
+                          height: 70.0,
                           width: 70.0,
 //                        color: Colors.red,
                           child: Image(
@@ -91,7 +91,7 @@ class _MeScreenState extends State<MeScreen> {
               ),
             ),
             SizedBox(
-              height: 10
+              height: 5
             ),
             Card(
               elevation: 0.0,
@@ -100,12 +100,12 @@ class _MeScreenState extends State<MeScreen> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: ClipRRect(
-                        borderRadius: BorderRadius.circular(18.0), //or 15.0
-                        child: Container(
-                          height: 200.0,
-                          width: 70.0,
-                          color: Colors.blue,
+                      leading: Container(
+                        height: 50.0,
+                        width: 50.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue
                         ),
                       ),
                       title: Text("Favourites", style: TextStyle(fontSize: 20),),
@@ -122,12 +122,12 @@ class _MeScreenState extends State<MeScreen> {
                       child: Divider(height: 20,),
                     ),
                     ListTile(
-                      leading: ClipRRect(
-                        borderRadius: BorderRadius.circular(18.0), //or 15.0
-                        child: Container(
-                          height: 200.0,
-                          width: 70.0,
-                          color: Colors.blue,
+                      leading: Container(
+                        height: 50.0,
+                        width: 50.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue
                         ),
                       ),
                       title: Text("My Posts", style: TextStyle(fontSize: 20),),
@@ -144,12 +144,12 @@ class _MeScreenState extends State<MeScreen> {
                       child: Divider(height: 20,),
                     ),
                     ListTile(
-                      leading: ClipRRect(
-                        borderRadius: BorderRadius.circular(18.0), //or 15.0
-                        child: Container(
-                          height: 200.0,
-                          width: 70.0,
+                      leading: Container(
+                        height: 50.0,
+                        width: 50.0,
+                        decoration: BoxDecoration(
                           color: Colors.blue,
+                          borderRadius: BorderRadius.circular(10)
                         ),
                       ),
                       title: Text("Sticker Gallery", style: TextStyle(fontSize: 20),),
@@ -169,21 +169,24 @@ class _MeScreenState extends State<MeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 5,),
             Card(
               elevation: 0.0,
               child: Container(
                 padding: EdgeInsets.only(top: 10),
                 height: 80,
                 child:  ListTile(
-                  leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(18.0), //or 15.0
-                    child: Container(
-                      height: 200.0,
-                      width: 70.0,
-                      color: Colors.blue,
+                  leading:
+
+                     Container(
+                      height: 50.0,
+                      width: 50.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.blue
+                      ),
                     ),
-                  ),
+
                   title: Text("Settings", style: TextStyle(fontSize: 20),),
                   trailing: IconButton(
                     onPressed: (){

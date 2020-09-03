@@ -64,16 +64,16 @@ Widget listTileForMoments(String name, BuildContext context ){
 
     elevation: 0.0,
     child: Container(
-      height: 100,
+      height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(18.0), //or 15.0
-            child: Container(
-              height: 70.0,
-              width: 70.0,
+          Container(
+            height: 50.0,
+            width: 50.0,
+            decoration: BoxDecoration(
               color: Colors.blue,
+              borderRadius: BorderRadius.circular(10)
             ),
           ),
 
@@ -85,8 +85,8 @@ Widget listTileForMoments(String name, BuildContext context ){
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                height: 40.0,
-                width: 40.0,
+                height: 30.0,
+                width: 30.0,
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10)
@@ -109,16 +109,18 @@ Widget listTileForMoments(String name, BuildContext context ){
 
 Widget listTile1(String name , BuildContext context, double padd){
   return Container(
-height: 100,
+height: 60,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(18.0), //or 15.0
-          child: Container(
-            height: 70.0,
-            width: 70.0,
+        Container(
+          height: 50.0,
+          width: 50.0,
+
+          decoration: BoxDecoration(
             color: Colors.blue,
+            borderRadius: BorderRadius.circular(10)
+
           ),
         ),
 
@@ -141,16 +143,17 @@ height: 100,
 Widget listTile2(String name , BuildContext context,  [double padd]){
   return Container(
     margin: EdgeInsets.symmetric(horizontal: 10),
-height: 80,
+height: 60,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(18.0), //or 15.0
-          child: Container(
-            height: 70.0,
-            width: 70.0,
+        Container(
+          height: 50.0,
+          width: 50.0,
+
+          decoration: BoxDecoration(
             color: Colors.blue,
+            borderRadius: BorderRadius.circular(10)
           ),
         ),
         SizedBox(width: 20,),
@@ -163,5 +166,50 @@ height: 80,
 
       ],
     ),
+  );
+}
+
+
+Widget chatListTile ({BuildContext context, String  name, String time, String message})
+{
+  return Container(
+child: Padding(
+  padding: const EdgeInsets.only(top:5, left: 5, right: 4, bottom: 5),
+  child:   Row(
+    children: [
+      ClipRRect(
+        borderRadius: BorderRadius.circular(10.0), //or 15.0
+        child: Container(
+          height: 70,
+          width: 70.0,
+
+          child: Image(
+            image: AssetImage("images/image1.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding:  EdgeInsets.only(left: 10,),
+            child: Text(name, style: Theme.of(context).textTheme.headline6,),
+          ),
+
+          Container(
+            width: 230,
+            child: Chip(
+              backgroundColor: Theme.of(context).backgroundColor,
+
+              label: Text(message, style: Theme.of(context).textTheme.headline4,),
+            ),
+          )
+        ],
+      ),
+      Text(time, style: Theme.of(context).textTheme.subtitle1,),
+    ],
+  ),
+),
   );
 }

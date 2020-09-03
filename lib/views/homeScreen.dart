@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  int _selectedPage = 3;
+  int _selectedPage = 0;
   String _title;
 
   var date = TimeOfDay.now();
@@ -33,19 +33,21 @@ class _HomeScreenState extends State<HomeScreen> {
     // TODO: implement initState
     super.initState();
 
-    _title = "Snapp Chat";
+    _title = "Chats";
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       extendBody: false,
 //      backgroundColor: Colors.white70,
       appBar: appBarCheck(_title, context),
       body: _pageOptions[_selectedPage],
 
       bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.only(topRight: Radius.circular(20), topLeft:Radius.circular(20)),
+
+        borderRadius: BorderRadius.only(topRight: Radius.circular(15), topLeft:Radius.circular(15)),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           unselectedItemColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,

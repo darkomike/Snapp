@@ -30,7 +30,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 },
                 child: Card(elevation: 0.0, child: listTile1('Scan', context, 100))),
             Padding(
-              padding: const EdgeInsets.only(left: 95),
+              padding: const EdgeInsets.only(left: 0),
               child: Divider(
                 height: 10,
               ),
@@ -41,7 +41,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 //TODO:
               },
               child: Card(
-                child: listTile1('Echo', context, 100),
+                child: listTile1('Echo', context, 0),
                 elevation: 0.0,
               ),
             ),
@@ -54,7 +54,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 //TODO:
               },
               child: Card(
-                child: listTile1('Search', context, 100),
+                child: listTile1('Search', context, 0),
                 elevation: 0.0,
               ),
             ),
@@ -67,7 +67,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 //TODO:
               },
               child: Card(
-                child: listTile1('People Nearby', context, 45),
+                child: listTile1('People Nearby', context, 0),
                 elevation: 0.0,
               ),
             ),
@@ -81,7 +81,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 //TODO:
               },
               child: Card(
-                child: listTile1('Mini Programs', context, 45),
+                child: listTile1('Mini Programs', context, 0),
                 elevation: 0.0,
               ),
             ),

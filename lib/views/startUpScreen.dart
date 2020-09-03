@@ -105,13 +105,13 @@ class _StartUpScreenState extends State<StartUpScreen> {
                                   //TODO: move to login dialog ...
                                   print("Log In button is clicked");
 
-//                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
-//                                    return HomeScreen();
-//                                  }) );
+                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
+                                    return HomeScreen();
+                                  }) );
 
-                                  setState(() {
-                                    _logInDialog(context: context);
-                                  });
+//                                  setState(() {
+//                                    _logInDialog(context: context);
+//                                  });
                                 },
                                 child: Container(
                                   width: width * 0.30,

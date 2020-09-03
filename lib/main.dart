@@ -36,7 +36,7 @@ class SnappApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: appState.isDarkModeOn ? ThemeMode.dark : ThemeMode.light , // function for switching app themes
-        home: StartUpScreen()
+        home: HomeScreen()
         );
       },
 
