@@ -10,7 +10,7 @@ class _MeScreenState extends State<MeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
           backgroundColor: Theme.of(context).appBarTheme.color,
           elevation: 0.0,
@@ -81,7 +81,9 @@ class _MeScreenState extends State<MeScreen> {
                             print("Forward button button pressed");
                           },
                           icon: Icon(
-                            Icons.arrow_forward_ios, color: Theme.of(context).iconTheme.color, size: Theme.of(context).iconTheme.size,
+                            Icons.arrow_forward_ios,
+                            color: Theme.of(context).iconTheme.color,
+                            size: Theme.of(context).iconTheme.size,
                           ),
                         ),
                       ],
@@ -90,9 +92,7 @@ class _MeScreenState extends State<MeScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 5
-            ),
+            SizedBox(height: 5),
             Card(
               elevation: 0.0,
               child: Container(
@@ -104,99 +104,127 @@ class _MeScreenState extends State<MeScreen> {
                         height: 50.0,
                         width: 50.0,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue
-                        ),
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blue),
                       ),
-                      title: Text("Favourites", style: TextStyle(fontSize: 20),),
+                      title: Text(
+                        "Favourites",
+                        style: TextStyle(fontSize: 20),
+                      ),
                       trailing: IconButton(
-                        onPressed: (){
+                        onPressed: () {
                           //TODO ;
                           print("favourite clicked");
                         },
-                        icon: Icon(Icons.arrow_forward_ios, color: Theme.of(context).iconTheme.color,  size: Theme.of(context).iconTheme.size,),
+                        icon: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Theme.of(context).iconTheme.color,
+                          size: Theme.of(context).iconTheme.size,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 80, right: 20),
-                      child: Divider(height: 20,),
+                      child: Divider(
+                        height: 20,
+                      ),
                     ),
                     ListTile(
                       leading: Container(
                         height: 50.0,
                         width: 50.0,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue
-                        ),
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blue),
                       ),
-                      title: Text("My Posts", style: TextStyle(fontSize: 20),),
+                      title: Text(
+                        "My Posts",
+                        style: TextStyle(fontSize: 20),
+                      ),
                       trailing: IconButton(
-                        onPressed: (){
+                        onPressed: () {
                           //TODO ;
                           print("My posts clicked");
                         },
-                        icon: Icon(Icons.arrow_forward_ios, color: Theme.of(context).iconTheme.color,  size: Theme.of(context).iconTheme.size,),
+                        icon: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Theme.of(context).iconTheme.color,
+                          size: Theme.of(context).iconTheme.size,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 80, right: 20),
-                      child: Divider(height: 20,),
+                      child: Divider(
+                        height: 20,
+                      ),
                     ),
                     ListTile(
                       leading: Container(
                         height: 50.0,
                         width: 50.0,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)
-                        ),
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(10)),
                       ),
-                      title: Text("Sticker Gallery", style: TextStyle(fontSize: 20),),
+                      title: Text(
+                        "Sticker Gallery",
+                        style: TextStyle(fontSize: 20),
+                      ),
                       trailing: IconButton(
-                        onPressed: (){
+                        onPressed: () {
                           //TODO ;
                           print("Sticker gallery clicked");
                         },
-                        icon: Icon(Icons.arrow_forward_ios, color: Theme.of(context).iconTheme.color,  size: Theme.of(context).iconTheme.size,),
+                        icon: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Theme.of(context).iconTheme.color,
+                          size: Theme.of(context).iconTheme.size,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 80, right: 20),
-                      child: Divider(height: 20,),
+                      child: Divider(
+                        height: 20,
+                      ),
                     )
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             Card(
               elevation: 0.0,
               child: Container(
                 padding: EdgeInsets.only(top: 10),
                 height: 80,
-                child:  ListTile(
-                  leading:
-
-                     Container(
-                      height: 50.0,
-                      width: 50.0,
-                      decoration: BoxDecoration(
+                child: ListTile(
+                  leading: Container(
+                    height: 50.0,
+                    width: 50.0,
+                    decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue
-                      ),
-                    ),
-
-                  title: Text("Settings", style: TextStyle(fontSize: 20),),
+                        color: Colors.blue),
+                  ),
+                  title: Text(
+                    "Settings",
+                    style: TextStyle(fontSize: 20),
+                  ),
                   trailing: IconButton(
-                    onPressed: (){
+                    onPressed: () {
                       //TODO ;
                       print("Settings clicked");
                     },
-                    icon: Icon(Icons.arrow_forward_ios, color: Theme.of(context).iconTheme.color,  size: Theme.of(context).iconTheme.size,),
+                    icon: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Theme.of(context).iconTheme.color,
+                      size: Theme.of(context).iconTheme.size,
+                    ),
                   ),
                 ),
-
               ),
             )
           ],

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:they_chat_app/views/contactsScreen.dart';
-import 'package:they_chat_app/views/homeScreen.dart';
-import 'package:they_chat_app/views/meScreen.dart';
-import 'package:they_chat_app/views/splashScreen.dart';
 import 'package:they_chat_app/widgets/appStateNotifier.dart';
 import 'package:they_chat_app/widgets/myThemes.dart';
 

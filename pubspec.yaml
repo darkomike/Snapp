@@ -24,6 +24,9 @@ dependencies:
   language_pickers: ^0.2.0+1
   contacts_service: ^0.4.6
   provider: ^4.3.2+1
+  country_codes: ^1.0.1
+  country_code_picker: ^1.4.0
+
   flutter:
     sdk: flutter
 

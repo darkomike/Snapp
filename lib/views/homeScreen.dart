@@ -4,17 +4,17 @@ import 'package:they_chat_app/views/chatsScreen.dart';
 import 'package:they_chat_app/views/contactsScreen.dart';
 import 'package:they_chat_app/views/discoverScreen.dart';
 import 'package:they_chat_app/views/meScreen.dart';
-import 'package:they_chat_app/widgets/customizeNavigator.dart';
 import 'package:provider/provider.dart';
 import 'package:they_chat_app/widgets/appStateNotifier.dart';
+import 'package:they_chat_app/widgets/customWidgets.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
+//  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   int _selectedPage = 0;
   String _title;
@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   var date = TimeOfDay.now();
 
   List<Widget> _pageOptions = [
-   ChatsScreen(),
+    ChatsScreen(),
     ContactsScreen(),
     DiscoverScreen(),
     MeScreen()
@@ -46,16 +46,18 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _pageOptions[_selectedPage],
 
       bottomNavigationBar: ClipRRect(
-
-        borderRadius: BorderRadius.only(topRight: Radius.circular(15), topLeft:Radius.circular(15)),
+        borderRadius: BorderRadius.only(
+            topRight: Radius.circular(15), topLeft: Radius.circular(15)),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          unselectedItemColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
+          unselectedItemColor:
+              Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
           selectedItemColor: Colors.lightGreenAccent[400],
           elevation: 4,
           selectedFontSize: 18,
           showUnselectedLabels: true,
-          backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+          backgroundColor:
+              Theme.of(context).bottomNavigationBarTheme.backgroundColor,
           iconSize: 35,
           currentIndex: _selectedPage,
           onTap: onTabTapped,
@@ -67,9 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.group), title: Text("Contacts")),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.explore,
-                ),
+                icon: discoverIcon(context: context),
                 title: Text("Discover")),
             BottomNavigationBarItem(
                 icon: Icon(Icons.account_circle), title: Text("Me")),
@@ -82,30 +82,38 @@ class _HomeScreenState extends State<HomeScreen> {
   void onTabTapped(int index) {
     setState(() {
       _selectedPage = index;
-      switch(index) {
-        case 0: { _title = 'Chats'; }
-        break;
-        case 1: { _title = 'Contacts'; }
-        break;
-        case 2: { _title = 'Discover'; }
-        break;
-        case 3: {
-          _title = 'Me';
-
-
-        }
-        break;
+      switch (index) {
+        case 0:
+          {
+            _title = 'Chats';
+          }
+          break;
+        case 1:
+          {
+            _title = 'Contacts';
+          }
+          break;
+        case 2:
+          {
+            _title = 'Discover';
+          }
+          break;
+        case 3:
+          {
+            _title = 'Me';
+          }
+          break;
       }
     });
   }
 
-  Widget appBarForThree(String title, BuildContext context){
+  Widget appBarForThree(String title, BuildContext context) {
     return AppBar(
       elevation: 0.0,
-        backgroundColor: Theme.of(context).appBarTheme.color,
+      backgroundColor: Theme.of(context).appBarTheme.color,
       title: Text(
         title,
-style: Theme.of(context).textTheme.overline,
+        style: Theme.of(context).textTheme.overline,
 //          style: TextStyle(color: Colors.black87),
       ),
       actions: [
@@ -129,21 +137,21 @@ style: Theme.of(context).textTheme.overline,
           },
         ),
         Switch(
-          value: Provider.of<AppStateNotifier>(context, listen: false).isDarkModeOn ,
-          onChanged: (boolVal){
-            Provider.of<AppStateNotifier>(context, listen: false).updateTheme(boolVal);
+          value: Provider.of<AppStateNotifier>(context, listen: false)
+              .isDarkModeOn,
+          onChanged: (boolVal) {
+            Provider.of<AppStateNotifier>(context, listen: false)
+                .updateTheme(boolVal);
           },
         )
       ],
     );
   }
 
-
-
-  Widget appBarCheck(String title, BuildContext context){
+  Widget appBarCheck(String title, BuildContext context) {
     var appBar;
-    if (_selectedPage < 3 ){
-      appBar= appBarForThree(title, context);
+    if (_selectedPage < 3) {
+      appBar = appBarForThree(title, context);
     }
     return appBar;
   }
